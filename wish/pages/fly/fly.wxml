@@ -1,0 +1,4 @@
+<view class="container bg-img">
+    <image wx:if="{{wishImage}}" style="{{'margin-top:'+topStyle+'rpx'}}" class="lantern" src="{{'../../assets/'+wishImage+'.png'}}"></image>
+    <image class="mee" src="../../assets/mee.png"></image>
+</view>

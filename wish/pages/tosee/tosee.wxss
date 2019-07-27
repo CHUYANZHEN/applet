@@ -1,0 +1,77 @@
+.tosee-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 800rpx;
+    width: 600rpx;
+    border-radius: 23rpx;
+    background: rgba(99, 88, 157, 0.7);
+    margin-top: 140rpx;
+}
+
+.tosee-lantern {
+    height: 120rpx;
+    width: 110rpx;
+    margin-top: 25rpx;
+}
+
+.tosee-topic {
+    color: #fff;
+    font-size: 36rpx;
+    line-height: 36rpx;
+    margin-top: 16rpx;
+    font-weight: 800;
+}
+
+.tosee-head {
+    margin-top: 60rpx;
+}
+
+.tosee-switch {
+    margin-top: 12rpx;
+}
+
+.switch-css {
+    width: 14rpx;
+    height: 26rpx;
+    padding: 15rpx;
+}
+
+.tosee-headtex {
+    display: inline-block;
+    width: 500rpx;
+    color: #fff;
+    font-size: 26rpx;
+    text-align: center;
+}
+
+.tosee-con {
+    color: #fff;
+    font-size: 26rpx;
+    font-weight: 400;
+    margin-top: 56rpx;
+}
+
+.tosee-others {
+    margin-top: 50rpx;
+}
+
+.tosee-others-img {
+    width: 57rpx;
+    height: 57rpx;
+    margin-left: -12rpx;
+    box-shadow: -3px 0px 5px 0px rgba(108, 86, 86, 0.75);
+    border-radius: 50%;
+}
+
+.tosee-tot {
+    margin-top: 10rpx;
+    color: #fff;
+    font-size: 26rpx;
+}
+
+.tosee-heart {
+    width: 100rpx;
+    height: 100rpx;
+    margin-top: 40rpx;
+}

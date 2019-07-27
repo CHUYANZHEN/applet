@@ -1,0 +1,18 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/share/share",
+        "pages/fly/fly",
+        "pages/writewish/writewish",
+        "pages/pay/pay",
+        "pages/selectype/selectype",
+        "pages/mywish/mywish",
+        "pages/tosee/tosee"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#31277e",
+        "navigationBarTitleText": "祈福许愿灯",
+        "navigationBarTextStyle": "white"
+    }
+}

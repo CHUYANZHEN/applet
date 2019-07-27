@@ -1,0 +1,8 @@
+{
+  "disableScroll": true,
+  "enablePullDownRefresh": false,
+  "navigationBarBackgroundColor": "#0a072b",
+  "usingComponents": {
+    "canvasdrawer": "canvasdrawer/canvasdrawer"
+  }
+}

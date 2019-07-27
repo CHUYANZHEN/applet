@@ -1,0 +1,22 @@
+<view class="container bg-img">
+    <view class="tosee-top">
+        <image wx:if="{{wishImage}}" class="tosee-lantern" src="{{'../../assets/'+wishImage+'.png'}}" />
+        <text class="tosee-topic">{{wishIntroduce}}</text>
+        <image wx:if="{{avatarUrl}}" class="tosee-head head-css" src="{{avatarUrl}}" />
+        <view class="tosee-switch">
+            <image class="switch-css" bindtap="switchWish" data-type="0" src="../../assets/btn-left.png" />
+            <text class="tosee-headtex">{{nickname}}</text>
+            <image class="switch-css" bindtap="switchWish" data-type="1" src="../../assets/btn-right.png" />
+        </view>
+        <text class="tosee-con">{{content}}</text>
+        <view class="tosee-others">
+            <image wx:if="{{spotList.length>0}}" class="tosee-others-img" wx:for="{{spotList}}" wx:for-item="item" src="{{item.avatarUrl}}" />
+        </view>
+        <text class="tosee-tot">已有{{spotCount}}人为您祝福</text>
+        <image wx:if="{{spotFlag==0}}" bindtap="giveStart" class="tosee-heart" src="../../assets/heart-off.png" />
+        <image wx:else class="tosee-heart" bindtap="hadStart" src="../../assets/heart-on.png" />
+    </view>
+    <view class="bottom-view-btn1">
+        <button class="bottom-btn1" bindtap="lightWish">我也点亮心愿</button>
+    </view>
+</view>

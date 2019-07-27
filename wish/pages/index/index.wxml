@@ -1,0 +1,71 @@
+<!-- index.wxml -->
+<view class="container">
+    <view wx:if="{{!hasUserInfo && canIUse}}" class="allow">
+        <view class="allow-top">
+            <image class="allow-logo" src="../../assets/logo.png" mode="cover"></image>
+            <text class="allow-title">祈福许愿灯</text>
+        </view>
+        <view class="allow-content">
+            <text class="al-con-t1">网页由该小程序开发,请确认授权信息</text>
+            <text class="al-con-t2">· 获得你的公开信息(昵称、头像等)</text>
+        </view>
+        <button class="allow-btn" wx:v-show wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+            确认登录
+        </button>
+    </view>
+    <view wx:else class="home bg-img">
+        <image class="home-mywish" bindtap="toMyWish" src="../../assets/mywish.png" />
+        <scroll-view class="scroll__list" scroll-x="true" bindscrolltolower="lower">
+            <view wx:for="{{scrolls}}" wx:for-index="index" wx:for-item="item" class="scroll__wrapper">
+                <view id="{{index}}" class="items">
+                    <view wx:for="{{item}}" wx:for-index="idx" wx:for-item="perItem" class="{{'per-lantern'+(idx+1)}}" bindtap="toSee" data-id="{{perItem.id}}" data-userinfoid="{{perItem.userInfoId}}">
+                        <image class="lantern" src="{{'../../assets/'+perItem.wishImage+'.png'}}" />
+                        <view>
+                            <image wx:if="{{perItem.avatarUrl}}" class="'lan-h '+{{'lan-h'+(idx+1)}}" src="{{perItem.avatarUrl}}" />
+                        </view>
+                    </view>
+                    <!-- <view class="per-lantern1" bindtap="toSee" data-id="{{item.id}}" data-userinfoid="{{item.userInfoId}}">
+                        <image class="lantern" src="../../assets/ + {{userInfoId}} + .png" />
+                        <view>
+                            <image class="lan-h lan-h1" src="{{item.headpimg}}" />
+                        </view>
+                    </view>
+                    <view class="per-lantern1" bindtap="toSee" data-id="{{item.id}}" data-userinfoid="{{item.userInfoId}}">
+                        <image class="lantern" src="../../assets/ + {{userInfoId}} + .png" />
+                        <view>
+                            <image class="lan-h lan-h1" src="{{item.headpimg}}" />
+                        </view>
+                    </view>
+                    <view class="per-lantern1" bindtap="toSee" data-id="{{item.id}}" data-userinfoid="{{item.userInfoId}}">
+                        <image class="lantern" src="../../assets/ + {{userInfoId}} + .png" />
+                        <view>
+                            <image class="lan-h lan-h1" src="{{item.headpimg}}" />
+                        </view>
+                    </view>
+                    <view class="per-lantern1" bindtap="toSee" data-id="{{item.id}}" data-userinfoid="{{item.userInfoId}}">
+                        <image class="lantern" src="../../assets/ + {{userInfoId}} + .png" />
+                        <view>
+                            <image class="lan-h lan-h1" src="{{item.headpimg}}" />
+                        </view>
+                    </view>
+                    <view class="per-lantern1" bindtap="toSee" data-id="{{item.id}}" data-userinfoid="{{item.userInfoId}}">
+                        <image class="lantern" src="../../assets/ + {{userInfoId}} + .png" />
+                        <view>
+                            <image class="lan-h lan-h1" src="{{item.headpimg}}" />
+                        </view>
+                    </view>
+                    <view class="per-lantern1" bindtap="toSee" data-id="{{item.id}}" data-userinfoid="{{item.userInfoId}}">
+                        <image class="lantern" src="../../assets/ + {{userInfoId}} + .png" />
+                        <view>
+                            <image class="lan-h lan-h1" src="{{item.headpimg}}" />
+                        </view>
+                    </view> -->
+                </view>
+            </view>
+        </scroll-view>
+        <view class="bottom-view-btn1">
+            <text class="home-sum">目前已有{{wishNum}}人写下了心愿</text>
+            <button class="bottom-btn1" bindtap="toWriteWish">点灯许愿</button>
+        </view>
+    </view>
+</view>

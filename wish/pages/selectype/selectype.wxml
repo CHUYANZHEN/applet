@@ -1,0 +1,8 @@
+<view class="container bg-img">
+    <view class="select-content">
+        <text class="select-title">点灯许愿</text>
+        <view class="select-wrapper">
+            <image wx:for="{{lanternList}}" wx:for-index="index" wx:for-item="item" bindtap="toWriteWish" data-name="{{item.wishImage}}" data-wishtypeid="{{item.id}}" data-txt="{{item.wishIntroduce}}" class="select-img" src="{{'../../assets/'+item.wishImage+'.png'}}" />
+        </view>
+    </view>
+</view>

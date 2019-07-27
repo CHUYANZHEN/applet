@@ -1,0 +1,30 @@
+<view class="container bg-img">
+    <view class="my-content">
+        <image wx:if="{{headImg}}" class="my-head head-css" src="{{headImg}}" />
+        <text class="my-headtex">{{headTxt}}</text>
+        <view class="my-tab">
+            <view class="my-tab-per {{activeTab=='0' ? 'tab-active':'' }}" bindtap="tabSwitch" data-type="0">
+                我的心愿
+            </view>
+            <view class="my-tab-per {{activeTab=='1' ? 'tab-active':'' }}" bindtap="tabSwitch" data-type="1">
+                已祝福的心愿
+            </view>
+        </view>
+        <view class="my-list">
+            <view bindtap="toDetail" class="my-list-per" wx:for="{{wishList}}" wx:for-index="index" wx:for-item="item" data-userinfoid="{{item.userInfoId}}" data-wishtypeid="{{item.id}}">
+                <image class="list-img" src="{{'../../assets/'+item.wishImage+'.png'}}" />
+                <view class="list-content">
+                    <view wx:if="{{activeTab=='0'}}">
+                        <text class="list-head-txt">{{item.wishIntroduce}}</text>
+                    </view>
+                    <view wx:else class="list-head">
+                        <image class="list-head-img" src="{{item.avatarUrl}}" />
+                        <text class="list-head-txt">{{item.wishToName}}</text>
+                    </view>
+                    <text class="list-topic">{{item.content}}</text>
+                    <text class="list-peo">{{item.spotCount}}人祝福</text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

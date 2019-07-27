@@ -1,0 +1,108 @@
+.my-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 1000rpx;
+    width: 600rpx;
+    border-radius: 23rpx;
+    background: rgba(99, 88, 157, 0.7);
+    margin-top: 140rpx;
+}
+
+.my-head {
+    margin-top: 30rpx;
+}
+
+.my-headtex {
+    margin-top: 10rpx;
+    color: #fff;
+    font-size: 26rpx;
+    font-weight: 400;
+}
+
+.my-tab {
+    width: 512rpx;
+    margin-top: 30rpx;
+    background: #42395B;
+    border-radius: 5px 5px 5px 5px;
+    color: #fff;
+    font-size: 20rpx;
+    font-weight: 400;
+    overflow: hidden;
+}
+
+.my-tab-per {
+    display: inline-block;
+    width: 50%;
+    height: 50rpx;
+    line-height: 50rpx;
+    text-align: center;
+}
+
+.tab-active {
+    color: #42395B;
+    background: #998DBB;
+}
+
+.my-list {
+    overflow: auto;
+    width: 527rpx;
+    height: 705rpx;
+    margin-top: 20rpx;
+    background: rgba(66, 57, 91, 1);
+    border-radius: 10rpx;
+}
+
+.my-list-per {
+    width: 527rpx;
+    height: 106rpx;
+    margin: 20rpx 0;
+}
+
+.list-img {
+    float: left;
+    display: inline-block;
+    width: 95rpx;
+    height: 100rpx;
+    padding-left: 40rpx;
+    padding-top: 10rpx;
+}
+
+.list-content {
+    display: inline-block;
+    float: left;
+    height: 106rpx;
+    width: 358rpx;
+    padding-left: 25rpx;
+    padding-right: 10rpx;
+}
+
+.list-head {}
+
+.list-head-img {
+    width: 30rpx;
+    height: 30rpx;
+    border-radius: 50%;
+    margin-right:10rpx;
+}
+
+.list-head-txt {
+    color: #fff;
+    font-size: 26rpx;
+    height: 30rpx;
+    line-height: 30rpx;
+}
+
+.list-topic {
+    display: block;
+    color: #fff;
+    font-size: 21rpx;
+    font-weight: 400;
+}
+
+.list-peo {
+    display: block;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18rpx;
+}

@@ -1,0 +1,29 @@
+<view class="container bg-img">
+    <view class="pay-content">
+        <image wx:if="{{wishImage}}" class="pay-img" src="{{'../../assets/'+wishImage+'.png'}}" />
+        <image class="pay-head head-css" src="{{avatarUrl}}" />
+        <view class="pay-headtex">
+            许愿人姓名
+            <text class="pay-txt">{{nickName}}</text>
+        </view>
+        <view wx:if="{{activeTab=='1'}}" class="pay-tag">
+            <text class="pay-tag-t">愿:</text>
+            <text class="pay-tag-c">{{wishToName}}</text>
+        </view>
+        <view class="pay-tag">
+            <image wx:if="{{wishImage}}" class="list-img" src="{{'../../assets/'+wishImage+'.png'}}" />
+            <view class="list-content">
+                <text class="list-tex">{{content}}</text>
+            </view>
+        </view>
+        <view class="pay-bot">
+            <view class="pay-bot-l">
+                <text class="pay-bot-thro">￥365</text>
+                <view class="pay-bot-now">￥{{price}}</view>
+            </view>
+            <view class="pay-bot-r">
+                <button class="write-btn" bindtap="onPay">立即放飞</button>
+            </view>
+        </view>
+    </view>
+</view>

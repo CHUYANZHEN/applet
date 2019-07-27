@@ -1,0 +1,46 @@
+<view class="container bg-img">
+    <text class="write-title">大家都在许</text>
+    <view class="write-tag">
+        <scroll-view class="scroll__list" scroll-x="true">
+            <view wx:for="{{scrolls}}" wx:for-item="item" class="scroll__wrapper">
+                <view id="{{item.id}}" class="items" bindtap="selectTag" data-id="{{item.id}}" data-content="{{item.content}}">
+                    {{item.content}}
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="write-content">
+        <view class="write-switch">
+            <image class="switch-css l" bindtap="switchType" data-switch="-1" src="../../assets/btn-left.png" />
+            <image wx:if="{{wishImage}}" class="write-lantern" src="{{'../../assets/'+wishImage+'.png'}}" />
+            <image class="switch-css r" bindtap="switchType" data-switch="1" src="../../assets/btn-right.png" />
+        </view>
+        <text class="write-h1">{{wishIntroduce}}</text>
+        <view class="write-tab">
+            <view class="write-tab-per {{activeTab=='0' ? 'tab-active':'' }}" bindtap="tabSwitch" data-type="0">
+                写给自己
+            </view>
+            <view class="write-tab-per {{activeTab=='1' ? 'tab-active':'' }}" bindtap="tabSwitch" data-type="1">
+                写给他人
+            </view>
+            <view class="write-tab-per {{activeTab=='3' ? 'tab-active':'' }}" bindtap="tabSwitch" data-type="3">
+                给微信群
+            </view>
+        </view>
+        <input maxlength="6" bindinput="inputHer" wx:if="{{isHer}}" class="wirte-name" placeholder="请填写您要祈愿朋友的姓名(最多6个字)" value="{{textHer}}"></input>
+        <textarea maxlength="80" bindinput="textArea" id="textArea" class="write-textarea" placeholder="请闭眼3秒，然后认真写下你的心愿(最多80个字)" name="textarea" value="{{textArea}}" />
+        <view class="write-type-tab">
+            <view class="type-tab type1 {{typeTab=='0' ? 'checked':'' }}" bindtap="typeTab" data-type="0">
+                <image wx:if="{{headImg}}" class="type-tab-img" src="{{headImg}}" />
+                <text class="type-tab-txt">公开许愿</text>
+            </view>
+            <!-- <view class="type-tab type2 {{typeTab=='1' ? 'checked':'' }}" bindtap="typeTab" data-type="1">
+                <image class="type-tab-img" src="../../assets/no-name.png" />
+                <text class="type-tab-txt">匿名许愿</text>
+            </view> -->
+        </view>
+        <view class="write-view-btn">
+            <button class="write-btn" bindtap="toPayWish">许下心愿</button>
+        </view>
+    </view>
+</view>

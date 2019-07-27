@@ -1,0 +1,16 @@
+<view wx:if="{{!isCanvasShow}}" class="share bg-share">
+    <text class="share-title">2019年度关键词</text>
+    <text class="share-tag">{{wishName}}</text>
+    <view class="share-content">
+        <view class="">
+            <view class="share-mode">{{content}}</view>
+            <view class="share-author">{{author}}</view>
+        </view>
+    </view>
+    <image class="share-btn" bindtap="eventDraw" src="../../assets/share-btn.png" />
+    <!-- <image wx:if="{{shareImgUrl}}" bindlongtap="longTap" open-type="share" class="share-img" src="{{shareImgUrl}}" />
+    <text class="share-sum">您已点亮星球第{{wishCount}}盏灯</text>
+    <text class="share-tip">长按扫码，放飞心愿，获取专属守护者</text> -->
+</view>
+<image src="{{shareImage}}" class="share-image"></image>
+<canvasdrawer painting="{{painting}}" bind:getImage="eventGetImage" />
